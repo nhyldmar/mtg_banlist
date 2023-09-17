@@ -2,7 +2,8 @@
 
 Friends and I have some rules we use to add to the commander banlist in order to keep the game more fun. This is a parser people can use to check if their deck is legal within our custom restrictions. Feel free to fork this for your own purposes.
 
-## Categories:
+## Categories
+
 - Any cards that contain the word commander, except for cards with Eminence abilities, Partner, Backgrounds and Planeswalkers and cards given specific exemptions (none yet). (e.g. Command Tower)
 - Any non-land permanents that create more mana than they cost on the turn they are played. (e.g. Mana Vault)
 - Any two or fewer card combo wins (cards in the command zone do not count as a card). (e.g. Exquisite Blood + Sanguine Blood, two cards draw/tutor the rest of the combo)
@@ -11,18 +12,19 @@ Friends and I have some rules we use to add to the commander banlist in order to
 - Zero-mana counterspells. (e.g. Force of Will)
 - Cards that force draws. (e.g. Divine Intervention)
 - Banned in legacy
-- Banned in Modern (not Not-Legal)
+- Banned in modern
 
-## Specific:
+## Specific
+
 - Alpha Dual Lands
 - Ancient Tomb
 - Doubling Season
-- Arctic Foxes :)
+- Arctic Foxes :\)
 - Esper Sentinel
 - Intuition
 - Reanimate
 - Rotpriest
-- The Tabernacle at Pendrell Vale 
+- The Tabernacle at Pendrell Vale
 - Winter Orb
 - Stasis
 - Ad Nauseam
@@ -30,3 +32,11 @@ Friends and I have some rules we use to add to the commander banlist in order to
 - Smothering Tithe
 - Mana Drain
 - Dockside Extortionist
+
+# TODO
+
+- [ ] Add a discord bot that can be used to interface with this
+- [ ] Combo check
+- [ ] Mana turbo check
+- [ ] Empty library check
+- [ ] More robust regex for other text formats

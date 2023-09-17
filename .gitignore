@@ -1,7 +1,5 @@
 # Input and autogen
-banlists/legacy_banned.txt
-banlists/modern_banned.txt
-deck.txt
+*deck.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

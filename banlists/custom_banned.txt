@@ -19,3 +19,5 @@ Winter Orb
 Ad Nauseam
 Rhystic Study
 Smothering Tithe
+Mana Drain
+Dockside Extortionist
