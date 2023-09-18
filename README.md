@@ -35,7 +35,7 @@ Friends and I have some rules we use to add to the commander banlist in order to
 
 ## TODO
 
-- [ ] Add a discord bot that can be used to interface with this
+- [x] Add a discord bot that can be used to interface with this
 - [ ] Combo check
 - [x] Mana turbo check
 - [x] Empty library check

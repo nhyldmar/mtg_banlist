@@ -1,5 +1,4 @@
 import re
-import os
 
 
 card_regex_pattern = re.compile(r"^(?P<amount>\d{1,2})x? (?P<name>[^\(\n]*?)(?: \(.*)?$", re.MULTILINE)
@@ -21,21 +20,25 @@ class Deck:
 
     cards = {}
 
-    def __init__(self, deck_filename):
-        with open(deck_filename) as deck_file:
-            deck_string = deck_file.read()
-            matches = re.findall(card_regex_pattern, deck_string)
-            for (amount, name) in matches:
-                self.cards[name] = amount
+    def __init__(self, deck_string):
+        matches = re.findall(card_regex_pattern, deck_string)
+        for (amount, name) in matches:
+            self.cards[name] = amount
 
-    def is_valid_deck(self):
+    def get_deck_validity_message(self):
+        message = ""
         for clause, filename in self.banlist_dict.items():
             with open(f"banlists/{filename}") as file:
                 banned_cards = file.read().splitlines()
                 for card in self.cards.keys():
                     if card in banned_cards:
-                        print(f"'{card}'is banned by clause: {clause}")
+                        message += (f"\n**{card}** is banned by clause: *{clause}*")
+        if message == "":
+            message = "Deck is valid"
+
+        return message
 
 
-test_deck = Deck("deck.txt")
-test_deck.is_valid_deck()
+if __name__ == "__main__":
+    test_deck = Deck(open("test_deck.txt").read())
+    print(test_deck.get_deck_validity_message())
