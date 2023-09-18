@@ -33,10 +33,10 @@ Friends and I have some rules we use to add to the commander banlist in order to
 - Mana Drain
 - Dockside Extortionist
 
-# TODO
+## TODO
 
 - [ ] Add a discord bot that can be used to interface with this
 - [ ] Combo check
-- [ ] Mana turbo check
-- [ ] Empty library check
-- [ ] More robust regex for other text formats
+- [x] Mana turbo check
+- [x] Empty library check
+- [x] More robust regex for other text formats

@@ -1,11 +1,7 @@
 import csv
 import itertools
-import pickle
 import sqlite3
 from typing import List
-
-import requests
-import scrython
 
 from scryfall import get_card_names_and_ids
 from collections import namedtuple, defaultdict
@@ -218,7 +214,7 @@ where c2.type_line like '%land%' and c.id in (select c.id
 from combos c
          join combos_x_cards cxc on c.id = cxc.combo
          join cards c2 on cxc.card = c2.id
-where 
+where
     c2.type_line like '%land%'
 and c.id in (select c.id
                from combos c
@@ -233,7 +229,7 @@ and c.id in (select c.id
 
                                      or (
                                         {' or '.join(f"c2.mana_cost like '%{col}%'" for col in COLOURS if col not in colour_identity) or 'FALSE'}
-                                       ))))        
+                                       ))))
         """).fetchall()
 
     global combo_lands
@@ -263,7 +259,7 @@ where c.id in (select c.id
                                             join combos_x_cards cxc on c.id = cxc.combo
                                             join cards c2 on cxc.card = c2.id
                                      where (
-                                          {' or '.join(f"c2.mana_cost like '%{col}%'" for col in COLOURS if col not in colour_identity) or 'FALSE'} 
+                                          {' or '.join(f"c2.mana_cost like '%{col}%'" for col in COLOURS if col not in colour_identity) or 'FALSE'}
                                        )))
     """).fetchall()
     for row in result:

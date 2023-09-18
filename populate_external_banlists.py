@@ -13,7 +13,7 @@ search_string_to_file("banned:legacy",
                       "banlists/banned_in_legacy.txt")
 # Banned in modern
 search_string_to_file("banned:modern",
-                      "banlists/banned_in_legacy.txt")
+                      "banlists/banned_in_modern.txt")
 # Forced draw
 search_string_to_file("o:'game is a draw'",
                       "banlists/forced_draw.txt")
